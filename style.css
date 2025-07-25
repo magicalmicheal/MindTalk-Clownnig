@@ -425,7 +425,6 @@ body {
   padding-bottom: 0.3rem;
 }
 
-
 .featured-img {
   width: 100%;
   max-height: 250px;
@@ -759,4 +758,104 @@ section, footer {
 .sponsor-section img {
   height: 30px;
   object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .container,
+  .hero-container,
+  .about-container,
+  .speakers-container,
+  .event-grid,
+  .featured-section .container,
+  .faq-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image,
+  .about-text, .about-video,
+  .event-left, .event-right,
+  .featured-left, .featured-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .attend-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .faq-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p,
+  .about-text p,
+  .event-right p {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary, .btn-outline, .join-button, .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .gallery-section h2,
+  .faq-left h2,
+  .footer-top h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-left p,
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
 }
